@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<RamintoITELEC1C.Models.Instructor>
+@{
+    //using for each loop
+}
+
+<h1> Instructor List</h1>
+
+<table>
+    <tr>
+        <th>
+            Name:
+        </th>
+        <th>
+           Date Hired:
+        </th>
+        <th>
+            Email:
+        </th>
+        <th>
+            Rank:
+        </th>
+        <th>
+            Instrucotr ID:
+        </th>
+    </tr>
+    @foreach (var Instructor in Model)
+    {
+        <tr>
+            <td>@Instructor.InstructorName</td>
+            <td>@Instructor.DateHired</td>
+            <td>@Instructor.InstructorEmail</td>
+            <td>@Instructor.Rank</td>
+            <td>@Instructor.InstructorId</td>
+
+
+        </tr>
+        
+    }
+</table>
