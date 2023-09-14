@@ -6,35 +6,50 @@ namespace RamintoITELEC1C.Controllers
 {
     public class InstructorController : Controller
     {
-        public IActionResult Index()
-        {
+       
             List<Instructor> InstructorList = new List<Instructor>()
             {
                 new Instructor()
                 {
-                    InstructorName = "Gabriel Montano", DateHired = DateTime.Now,
-                    InstructorEmail = "gdmontano@ust.edu.ph", Rank = Rank.Instructor,
-                    InstructorId = 100
+                    InstructorId = 1, InstructorFirstName = "Gabriel", InstructorLastName = "Montano",
+                    InstructorEmail = "gdmontano@ust.edu.ph", IsTenured = true, HiringDate = DateTime.Now,
+                    Rank = Rank.Instructor
                 },
                 
                 new Instructor()
                 {
-                    InstructorName = "Gabriel Montano", DateHired = DateTime.Now,
-                    InstructorEmail = "gdmontano@ust.edu.ph", Rank = Rank.Instructor,
-                    InstructorId = 200
+                     InstructorId = 2, InstructorFirstName = "Gabriel", InstructorLastName = "Montano",
+                    InstructorEmail = "gdmontano@ust.edu.ph", IsTenured = true, HiringDate = DateTime.Now,
+                    Rank = Rank.Instructor
                 },
 
                 new Instructor()
                 {
-                    InstructorName = "Gabriel Montano", DateHired = DateTime.Now,
-                    InstructorEmail = "gdmontano@ust.edu.ph", Rank = Rank.Instructor,
-                    InstructorId = 300
-                },
+                     InstructorId = 3, InstructorFirstName = "Gabriel", InstructorLastName = "Montano",
+                    InstructorEmail = "gdmontano@ust.edu.ph", IsTenured = true, HiringDate = DateTime.Now,
+                    Rank = Rank.Instructor
+                }
                 
 
                 };
-
+        public IActionResult Index()
+        {
             return View(InstructorList);
         }
+    
+
+
+    
+
+        public IActionResult ShowDetail(int id)
+        {
+        Instructor? instructor = InstructorList.FirstOrDefault(st => st.InstructorId == id);
+        if (instructor != null)
+                return View(instructor);
+
+            return NotFound();
+
+        }
+
     }
 }
