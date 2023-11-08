@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model Student;
+
+<h2>Delete Instructor</h2>
+
+
+<form method="post" asp-action="DeleteStudent" asp-controller="Student" class='p-2 row gx-3 gy-2 align-items-center'>
+    <div class="form-group">
+        <label asp-for="StudentName"> Student Name</label>
+        <input asp-for="StudentName" class="form-control" asp-for="StudentName" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control" asp-for="Email" readonly />
+    </div>
+    <div class="form-group">
+        <label class="input-group-text" asp-for="Course">Course</label>
+        <select asp-for="Course" class="form-control" asp-items="@Html.GetEnumSelectList(typeof(Rank))" asp-for="Course" readonly>
+        </select>
+
+    </div>
+    <div class=" form-group">
+        <label asp-for="DateEnrolled">Date Enrolled</label>
+        <input asp-for="DateEnrolled" class="form-control" readonly />
+    </div>
+
+    <div style="text-align: center;">
+
+        <button type="submit" class="btn btn-primary">Delete</button>
+
+        <button type="button" onclick="history.back();" class="btn btn-primary">Back</button>
+
+    </div>
+
+
+</form>
+

@@ -1,12 +1,4 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@model IEnumerable<RamintoITELEC1C.Models.Instructor>
-@{
-    //using for each loop
-}
-
-<h1> Instructor List</h1>
+﻿<h1> Instructor List</h1>
 
 <table class="table table-light">
     <tr>
@@ -16,7 +8,9 @@
         <th>Tenured</th>
         <th>Rank</th>
         <th>More Details</th>
+        <th>Update Details</th>
     </tr>
+    
     @foreach (var Instructor in Model)
     {
         <tr>
@@ -25,9 +19,31 @@
             <td>@Instructor.IsTenured</td>
             <td>@Instructor.Rank</td>
             <td><a asp-action="ShowDetail" asp-route-id="@Instructor.InstructorId">Show Details</a></td>
+            <td><a asp-action="UpdateInstructor" asp-route-id="@Instructor.InstructorId">Update</a></td>
+            <td>
+                <a asp-action="DeleteInstructor" asp-route-id="@Instructor.InstructorId" class="btn btn-danger">Delete</a>
+            </td>
 
 
         </tr>
         
     }
+
 </table>
+<div class="text-align: center;">
+
+    <a class="button" style="background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;"
+       asp-action="AddInstructor">
+        Enter an Instructor
+
+    </a>
+</div>

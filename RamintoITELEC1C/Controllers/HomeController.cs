@@ -18,7 +18,22 @@ namespace RamintoITELEC1C.Controllers
             return View();
         }
 
+        public IActionResult About()
+        {
+            return View();
+        }
+
+        public IActionResult Home()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        public IActionResult ShowDetail()
         {
             return View();
         }

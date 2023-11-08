@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34009.444
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RamintoITELEC1C", "RamintoITELEC1C\RamintoITELEC1C.csproj", "{D5C1C4BB-95E2-4CEB-9917-8C67C68EE41B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RamintoITELEC1C", "RamintoITELEC1C\RamintoITELEC1C.csproj", "{D5C1C4BB-95E2-4CEB-9917-8C67C68EE41B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

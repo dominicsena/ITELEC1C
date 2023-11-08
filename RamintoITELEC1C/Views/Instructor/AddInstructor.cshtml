@@ -1,0 +1,86 @@
+﻿@model Instructor;
+
+<body>
+    <div class="main-container">
+
+        <div asp-validation-summary="All" class="text-danger"> </div>
+        <h2 id="HDR" style="font-size: 40px; color: #d17724; font-weight: lighter; text-align: center;">Instructor Registration</h2>
+        <div class="container">
+            <div style="text-align:center">
+
+                Add a new Instructor
+
+            </div>
+            <form asp-action="AddInstructor" asp-controller="Instructor" method="post">
+
+                <div class="form-group">
+
+                    <label asp-for="InstructorId"></label>
+                    <input asp-for="InstructorId" class="form-control" id="InstructorId" placeholder="Enter Instructor ID" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label asp-for="InstructorFirstName"></label>
+                    <input asp-for="InstructorFirstName" class="form-control" id="InstructorFirstName" placeholder="Enter Instructor First Name" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label asp-for="InstructorLastName"></label>
+                    <input asp-for="InstructorLastName" class="form-control" id="InstructorLastName" placeholder="Enter Instructor Last Name" />
+
+                </div>
+
+                <div class="form-group">
+
+                    <label asp-for="Rank"></label>
+                    <select asp-for="Rank" asp-items="@Html.GetEnumSelectList(typeof(Rank))" class="form-control" id="Course" placeholder="Enter your course"> </select>
+
+
+
+                </div>
+
+                <div class="form-group">
+
+                    <label asp-for="HiringDate"></label>
+                    <input asp-for="HiringDate" class="form-control" id="HiringDate" placeholder="DateHired" />
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label asp-for="InstructorEmail"></label>
+                    <input asp-for="InstructorEmail" class="form-control" id="InstructorEmail" placeholder="Enter your Email" />
+
+                </div>
+
+                <br />
+
+                <div style="text-align: center;">
+
+                    <button type="submit" class="btn btn-primary">
+
+                        Submit
+
+                    </button>
+
+                    <button type="button" onclick="history.back();" class="btn btn-primary">
+
+                        Cancel
+
+                    </button>
+
+                </div>
+
+
+
+            </form>
+
+        </div>
+
+    </div>
+</body>
